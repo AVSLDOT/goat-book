@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Clone') {
             steps {
-                git 'https://github.com/AVSLDOT/goat-book.git'                
+                git branch: 'main', url: 'https://github.com/AVSLDOT/goat-book.git'                
             }
         }
         stage('Build') {
