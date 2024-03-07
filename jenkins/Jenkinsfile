@@ -6,8 +6,10 @@ pipeline {
     }
     stages {
         stage('Cleanup'){
+            steps {
                 // Clean before build
                 cleanWs()
+            }
         }
         stage('Clone') {
             steps {
