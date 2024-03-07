@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    }
+    stages {
+		stage('Clone') {
+            steps {
+                git 'https://github.com/AVSLDOT/goat-book.git'                
+            }
+        }
+        stage('Build') {
+            steps {
+                
+                sh 'docker build -t superlists .'
+            }
+        }        
+        
+    }
+}
+
