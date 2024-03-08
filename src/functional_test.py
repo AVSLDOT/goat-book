@@ -10,10 +10,11 @@ from selenium.webdriver.common.keys import Keys
 class NewVisitorTest(unittest.TestCase):
     def setUp(self) -> None:
         super().setUp()
-        FFoptions = Options()
+        ##FFoptions = Options()
         FFoptions.add_argument("--headless")
-        FFservice = Service(executable_path="/snap/bin/geckodriver")
-        self.browser = webdriver.Firefox(options=FFoptions, service=FFservice)
+        ##FFservice = Service(executable_path="/snap/bin/geckodriver")
+        ##self.browser = webdriver.Firefox(options=FFoptions, service=FFservice)
+        self.browser = webdriver.Firefox()
 
     def tearDown(self) -> None:
         super().tearDown()
